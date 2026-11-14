@@ -1,0 +1,4 @@
+Build validation passed.
+Rows: 300; train: 240; test: 60
+Max absolute prediction difference versus scikit-learn pipelines on test rows: 2.27373675443e-13
+Runtime app loads model_parameters.json only; no joblib/scikit-learn pickle loading.

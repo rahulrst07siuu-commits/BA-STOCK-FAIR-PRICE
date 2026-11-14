@@ -1,0 +1,164 @@
+{
+  "project_name": "Stock Price Prediction",
+  "dataset_name": "stock_price_prediction_sample_synthetic.csv",
+  "dataset_type": "Synthetic educational dataset; not real historical NSE/BSE data.",
+  "training_rows": 240,
+  "testing_rows": 60,
+  "numeric_features": [
+    "EPS",
+    "BookValue",
+    "ROE",
+    "DebtEquity",
+    "SalesGrowth"
+  ],
+  "numeric_medians": [
+    187.75,
+    253.1,
+    30.299999999999997,
+    1.17,
+    13.399999999999999
+  ],
+  "numeric_means": [
+    185.43375000000003,
+    251.2615416666667,
+    30.148750000000003,
+    1.1992083333333334,
+    14.190416666666666
+  ],
+  "numeric_scales": [
+    111.70743624577626,
+    140.85304145233525,
+    14.99829429538017,
+    0.7067417891968907,
+    14.943017873231707
+  ],
+  "sector_feature": "Sector",
+  "sector_imputed_value": "Auto",
+  "sector_categories": [
+    "Auto",
+    "Banking",
+    "Capital Goods",
+    "Energy",
+    "FMCG",
+    "IT",
+    "Metals",
+    "Pharma"
+  ],
+  "feature_names_after_preprocessing": [
+    "EPS",
+    "BookValue",
+    "ROE",
+    "DebtEquity",
+    "SalesGrowth",
+    "Sector_Auto",
+    "Sector_Banking",
+    "Sector_Capital Goods",
+    "Sector_Energy",
+    "Sector_FMCG",
+    "Sector_IT",
+    "Sector_Metals",
+    "Sector_Pharma"
+  ],
+  "regression_models": {
+    "Linear Regression": {
+      "intercept": 724.0442948922356,
+      "coefficients": [
+        412.7841258413585,
+        6.039467265123929,
+        -0.8643548110194899,
+        -5.0126517556571795,
+        7.8240416676237805,
+        20.20990870987082,
+        -11.11199942927944,
+        -15.498720383410415,
+        -10.537658153557047,
+        -0.552117595426714,
+        0.13941796501353215,
+        -1.5732283652851629,
+        18.924397252074435
+      ],
+      "metrics": {
+        "R2": 0.9716563461889369,
+        "MAE": 55.663431578670135,
+        "MSE": 4427.478501950407,
+        "RMSE": 66.53930043177796
+      }
+    },
+    "Ridge Regression": {
+      "intercept": 724.0790749008221,
+      "coefficients": [
+        411.0208815799983,
+        5.9265220835820855,
+        -0.998324173529915,
+        -5.111089478120909,
+        7.621889341493795,
+        19.847141954590718,
+        -10.336908186584013,
+        -15.381880820981122,
+        -10.121639204705886,
+        -0.5737939825142243,
+        0.030697738341152647,
+        -2.031917598668818,
+        18.568300100526386
+      ],
+      "metrics": {
+        "R2": 0.9715410206949632,
+        "MAE": 55.76571911426129,
+        "MSE": 4445.493156966278,
+        "RMSE": 66.67453154665789
+      }
+    },
+    "Lasso Regression": {
+      "intercept": 723.039125044833,
+      "coefficients": [
+        412.7173490854568,
+        5.999540671658159,
+        -0.7678932652611663,
+        -5.0032288707930155,
+        7.7451238316648245,
+        20.562822190896476,
+        -8.918353885416309,
+        -13.810138998183637,
+        -8.688193493318373,
+        0.0,
+        0.4488910915096389,
+        -0.0,
+        19.126594683288324
+      ],
+      "metrics": {
+        "R2": 0.9718072468826073,
+        "MAE": 55.533282790309606,
+        "MSE": 4403.906749994621,
+        "RMSE": 66.3619375093481
+      }
+    }
+  },
+  "classification_model": {
+    "intercept": -0.0723360102269896,
+    "coefficients": [
+      4.53391687024465,
+      -0.2824942945648827,
+      -0.2908218349300382,
+      -0.09243322551332818,
+      0.30350292399051637,
+      0.44160355122148887,
+      0.12567644367132877,
+      0.15493755963668743,
+      -0.42783759298846297,
+      0.40981997754555916,
+      -0.06241116343691355,
+      -0.29158644929747396,
+      -0.36364893100735945
+    ],
+    "metrics": {
+      "Accuracy": 0.9833333333333333,
+      "Precision": 1.0,
+      "Recall": 0.9705882352941176,
+      "F1": 0.9850746268656716
+    }
+  },
+  "classification_threshold": 719.72,
+  "classification_definition": "Low Price = price at or below the median price in the training set; High Price = above that median.",
+  "test_split": 0.2,
+  "random_state": 42
+}
